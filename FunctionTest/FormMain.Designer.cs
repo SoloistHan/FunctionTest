@@ -1,6 +1,6 @@
 ﻿namespace FunctionTest
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -40,18 +40,26 @@
             this.TabControl_Main = new System.Windows.Forms.TabControl();
             this.tabPage_Rename = new System.Windows.Forms.TabPage();
             this.tabPage_Replace = new System.Windows.Forms.TabPage();
+            this.RichTextBox_Display = new System.Windows.Forms.RichTextBox();
             this.TextBox_RPsource = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.TextBox_NewSymbol = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TextBox_OriSymbol = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.TextBox_RPtarget = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TextBox_OriSymbol = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TextBox_NewSymbol = new System.Windows.Forms.TextBox();
-            this.RichTextBox_Display = new System.Windows.Forms.RichTextBox();
+            this.tabPage_SNMP = new System.Windows.Forms.TabPage();
+            this.TextBox_SNMPsource = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TextBox_SNMPstrTitle = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TextBox_SNMPtarget = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.TabControl_Main.SuspendLayout();
             this.tabPage_Rename.SuspendLayout();
             this.tabPage_Replace.SuspendLayout();
+            this.tabPage_SNMP.SuspendLayout();
             this.SuspendLayout();
             // 
             // TextBox_SourceFolder
@@ -141,6 +149,7 @@
             // 
             this.TabControl_Main.Controls.Add(this.tabPage_Rename);
             this.TabControl_Main.Controls.Add(this.tabPage_Replace);
+            this.TabControl_Main.Controls.Add(this.tabPage_SNMP);
             this.TabControl_Main.Location = new System.Drawing.Point(12, 12);
             this.TabControl_Main.Name = "TabControl_Main";
             this.TabControl_Main.SelectedIndex = 0;
@@ -161,7 +170,7 @@
             this.tabPage_Rename.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Rename.Name = "tabPage_Rename";
             this.tabPage_Rename.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Rename.Size = new System.Drawing.Size(627, 312);
+            this.tabPage_Rename.Size = new System.Drawing.Size(627, 390);
             this.tabPage_Rename.TabIndex = 0;
             this.tabPage_Rename.Text = "Rename";
             this.tabPage_Rename.UseVisualStyleBackColor = true;
@@ -185,6 +194,15 @@
             this.tabPage_Replace.Text = "Replace";
             this.tabPage_Replace.UseVisualStyleBackColor = true;
             // 
+            // RichTextBox_Display
+            // 
+            this.RichTextBox_Display.Location = new System.Drawing.Point(6, 103);
+            this.RichTextBox_Display.Name = "RichTextBox_Display";
+            this.RichTextBox_Display.ReadOnly = true;
+            this.RichTextBox_Display.Size = new System.Drawing.Size(591, 271);
+            this.RichTextBox_Display.TabIndex = 8;
+            this.RichTextBox_Display.Text = "";
+            // 
             // TextBox_RPsource
             // 
             this.TextBox_RPsource.Font = new System.Drawing.Font("新細明體", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
@@ -199,9 +217,45 @@
             this.label6.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
             this.label6.Location = new System.Drawing.Point(6, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 15);
+            this.label6.Size = new System.Drawing.Size(60, 15);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Source c :";
+            this.label6.Text = "Sourcec :";
+            // 
+            // TextBox_NewSymbol
+            // 
+            this.TextBox_NewSymbol.Font = new System.Drawing.Font("新細明體", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.TextBox_NewSymbol.Location = new System.Drawing.Point(337, 74);
+            this.TextBox_NewSymbol.Name = "TextBox_NewSymbol";
+            this.TextBox_NewSymbol.Size = new System.Drawing.Size(72, 23);
+            this.TextBox_NewSymbol.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.label8.Location = new System.Drawing.Point(242, 77);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 15);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "New Symbol :";
+            // 
+            // TextBox_OriSymbol
+            // 
+            this.TextBox_OriSymbol.Font = new System.Drawing.Font("新細明體", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.TextBox_OriSymbol.Location = new System.Drawing.Point(122, 74);
+            this.TextBox_OriSymbol.Name = "TextBox_OriSymbol";
+            this.TextBox_OriSymbol.Size = new System.Drawing.Size(72, 23);
+            this.TextBox_OriSymbol.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.label7.Location = new System.Drawing.Point(6, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 15);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Original Symbol :";
             // 
             // TextBox_RPtarget
             // 
@@ -221,52 +275,76 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Target Folder :";
             // 
-            // label7
+            // tabPage_SNMP
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(6, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 15);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Original Symbol :";
+            this.tabPage_SNMP.Controls.Add(this.TextBox_SNMPsource);
+            this.tabPage_SNMP.Controls.Add(this.label9);
+            this.tabPage_SNMP.Controls.Add(this.TextBox_SNMPstrTitle);
+            this.tabPage_SNMP.Controls.Add(this.label11);
+            this.tabPage_SNMP.Controls.Add(this.TextBox_SNMPtarget);
+            this.tabPage_SNMP.Controls.Add(this.label10);
+            this.tabPage_SNMP.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_SNMP.Name = "tabPage_SNMP";
+            this.tabPage_SNMP.Size = new System.Drawing.Size(627, 390);
+            this.tabPage_SNMP.TabIndex = 2;
+            this.tabPage_SNMP.Text = "SNMP";
+            this.tabPage_SNMP.UseVisualStyleBackColor = true;
             // 
-            // TextBox_OriSymbol
+            // TextBox_SNMPsource
             // 
-            this.TextBox_OriSymbol.Font = new System.Drawing.Font("新細明體", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
-            this.TextBox_OriSymbol.Location = new System.Drawing.Point(122, 74);
-            this.TextBox_OriSymbol.Name = "TextBox_OriSymbol";
-            this.TextBox_OriSymbol.Size = new System.Drawing.Size(72, 23);
-            this.TextBox_OriSymbol.TabIndex = 5;
+            this.TextBox_SNMPsource.Font = new System.Drawing.Font("新細明體", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.TextBox_SNMPsource.Location = new System.Drawing.Point(69, 12);
+            this.TextBox_SNMPsource.Name = "TextBox_SNMPsource";
+            this.TextBox_SNMPsource.Size = new System.Drawing.Size(528, 23);
+            this.TextBox_SNMPsource.TabIndex = 8;
             // 
-            // label8
+            // label9
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(242, 77);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 15);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "New Symbol :";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.label9.Location = new System.Drawing.Point(3, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(60, 15);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Sourcec :";
             // 
-            // TextBox_NewSymbol
+            // TextBox_SNMPstrTitle
             // 
-            this.TextBox_NewSymbol.Font = new System.Drawing.Font("新細明體", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
-            this.TextBox_NewSymbol.Location = new System.Drawing.Point(337, 74);
-            this.TextBox_NewSymbol.Name = "TextBox_NewSymbol";
-            this.TextBox_NewSymbol.Size = new System.Drawing.Size(72, 23);
-            this.TextBox_NewSymbol.TabIndex = 5;
+            this.TextBox_SNMPstrTitle.Font = new System.Drawing.Font("新細明體", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.TextBox_SNMPstrTitle.Location = new System.Drawing.Point(98, 70);
+            this.TextBox_SNMPstrTitle.Name = "TextBox_SNMPstrTitle";
+            this.TextBox_SNMPstrTitle.Size = new System.Drawing.Size(499, 23);
+            this.TextBox_SNMPstrTitle.TabIndex = 9;
             // 
-            // RichTextBox_Display
+            // label11
             // 
-            this.RichTextBox_Display.Location = new System.Drawing.Point(6, 103);
-            this.RichTextBox_Display.Name = "RichTextBox_Display";
-            this.RichTextBox_Display.ReadOnly = true;
-            this.RichTextBox_Display.Size = new System.Drawing.Size(591, 271);
-            this.RichTextBox_Display.TabIndex = 8;
-            this.RichTextBox_Display.Text = "";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.label11.Location = new System.Drawing.Point(7, 71);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 15);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "String Title  :";
             // 
-            // Form1
+            // TextBox_SNMPtarget
+            // 
+            this.TextBox_SNMPtarget.Font = new System.Drawing.Font("新細明體", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.TextBox_SNMPtarget.Location = new System.Drawing.Point(69, 41);
+            this.TextBox_SNMPtarget.Name = "TextBox_SNMPtarget";
+            this.TextBox_SNMPtarget.Size = new System.Drawing.Size(528, 23);
+            this.TextBox_SNMPtarget.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
+            this.label10.Location = new System.Drawing.Point(7, 42);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 15);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Target  :";
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -275,13 +353,15 @@
             this.Controls.Add(this.Button_Start);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.Text = "Rename Function";
             this.TabControl_Main.ResumeLayout(false);
             this.tabPage_Rename.ResumeLayout(false);
             this.tabPage_Rename.PerformLayout();
             this.tabPage_Replace.ResumeLayout(false);
             this.tabPage_Replace.PerformLayout();
+            this.tabPage_SNMP.ResumeLayout(false);
+            this.tabPage_SNMP.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -309,6 +389,13 @@
         private System.Windows.Forms.TextBox TextBox_OriSymbol;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox RichTextBox_Display;
+        private System.Windows.Forms.TabPage tabPage_SNMP;
+        private System.Windows.Forms.TextBox TextBox_SNMPsource;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox TextBox_SNMPstrTitle;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox TextBox_SNMPtarget;
+        private System.Windows.Forms.Label label10;
     }
 }
 
